@@ -12,4 +12,14 @@ services:
       - key: NODE_ENV
         value: production
       - key: DATABASE_URL
-        sync: false
+        value: postgresql://root:1ExOZk7EVyqjIxO3XWofcyaKEYUfnwiq@dpg-d35r6gjlpnbc739ndt0-a/cloneacc_148x
+      - key: PGHOST
+        value: dpg-d35r6gjlpnbc739ndt0-a
+      - key: PGPORT
+        value: 5432
+      - key: PGDATABASE
+        value: cloneacc_148x
+      - key: PGUSER
+        value: root
+      - key: PGPASSWORD
+        value: 1ExOZk7EVyqjIxO3XWofcyaKEYUfnwiq
