@@ -7,8 +7,9 @@ services:
     buildCommand: npm install && npm run build
     startCommand: npm start
     healthCheckPath: /api/accounts/stats
+    preDeployCommand: npm run db:push
     envVars:
       - key: NODE_ENV
         value: production
       - key: DATABASE_URL
-        value: # Thay thế bằng URL database PostgreSQL thực tế của bạn từ Render
+        sync: false
