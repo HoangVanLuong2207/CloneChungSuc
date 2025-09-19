@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: account-management-app
+    env: node
+    region: singapore
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/accounts/stats
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        value: # Thay thế bằng URL database PostgreSQL thực tế của bạn từ Render
